@@ -19,26 +19,11 @@ class Login extends Component {
                   <div className="agile-field-txt">
                       <label> password</label>
                       <input type="password" name="password" placeholder="Enter Password" required="" id="myInput" />
-                      <div className="agile_label">
-                          <input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()" />
-                              <label className="check" for="check3">Show password</label>
-                      </div>
+
                       <div className="agile-right">
                           <a href="/forgot_password">forgot password?</a>
                       </div>
                   </div>
-                  {/* script for show password */}
-                  {/*<script>
-                  function myFunction() {
-                  var x = document.getElementById("myInput");
-                  if (x.type === "password") {
-                      x.type = "text";
-                  } else {
-                      x.type = "password";
-                  }
-              }
-              </script>*/}
-                  {/* //end script */}
                   <div className="w3ls-bot">
                       <div className="switch-agileits">
                           <label className="switch">
