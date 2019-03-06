@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
-import '../../assets/css/home.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import '../../assets/css/home.css';
 
 
 class Home extends Component {
+
+
     render() {
         return (
         <div className="home">
@@ -25,7 +27,7 @@ class Home extends Component {
                         <input type="checkbox" id="drop" />
                         <ul className="menu ml-auto">
                             <li className="active"><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="/login">Login</a></li>
                             <li><a href="services.html">Services</a></li>
                             <li>
                                 {/* First Tier Drop Down */}
