@@ -10,6 +10,8 @@ import Login from './components/login/Login'
 import Home from './components/home/Home'
 import DashBoard from './components/dashboard/DashBoard'
 import Wall from './components/wall/Wall'
+import Profil from './components/profil/Profil'
+
 import axios from "axios/index";
 
 import AuthService from './services/Auth'
@@ -28,6 +30,7 @@ class App extends Component {
                 <Route path="/login" component={Login} />
                 <PrivateRoute  path="/dashboard" component={DashBoard} />
                 <PrivateRoute  path="/wall" component={Wall} />
+                <PrivateRoute  path="/profil" component={Profil} />
             </div>
         </Router>
     );
