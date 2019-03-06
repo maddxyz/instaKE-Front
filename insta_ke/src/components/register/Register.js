@@ -58,7 +58,7 @@ class Register extends Component {
             username: this.state.username
         };
 
-        axios.post(`http://127.0.0.1:4000/api/check_username`, { user })
+        axios.post(`http://35.193.141.110:4000/api/check_username`, { user })
             .then(res => {
                 console.log(res);
                 console.log(res.data);

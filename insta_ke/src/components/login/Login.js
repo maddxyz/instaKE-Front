@@ -24,7 +24,7 @@ class Login extends Component {
             password: this.state.password,
         };
 
-        axios.post(`http://127.0.0.1:4000/api/auth`, { user })
+        axios.post(`http://35.193.141.110:4000/api/auth`, { user })
             .then(res => {
                 if(res.data.success) {
                     localStorage.setItem('auth_key', res.data.token);

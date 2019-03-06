@@ -8,7 +8,7 @@ import AuthService from '../../services/Auth';
 
 import axios from "axios/index";
 
-
+import Navbar from '../navbar/Navbar'
 
 class Wall extends Component {
     constructor(props, context) {
@@ -22,7 +22,7 @@ class Wall extends Component {
             headers: {'Authorization': "Bearer " + localStorage.getItem('auth_key')}
         };
 
-        axios.get(`http://127.0.0.1:4000/api/wall`,
+        axios.get(`http://35.193.141.110:4000/api/wall`,
             config
         )
         .then(res => {
@@ -38,39 +38,7 @@ class Wall extends Component {
                 {/* mian-content */}
                 <section className="main-content" id="home">
                     {/* /header */}
-                    <header>
-                        <div className="container-fluid px-lg-5 px-3">
-                            {/* nav */}
-                            <nav className="py-2 d-lg-flex">
-                                <div id="logo">
-                                    <h1><a className="navbar-brand logo" href="index.html">
-                                        <span className="fa fa-camera" aria-hidden="true"></span> Clack
-                                    </a></h1>
-                                </div>
-
-                                <label for="drop" className="toggle">Menu</label>
-                                <input type="checkbox" id="drop" />
-                                <ul className="menu ml-auto">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li>
-                                        {/* First Tier Drop Down */}
-                                        <label for="drop-2" className="toggle">Dropdown <span className="fa fa-angle-down" aria-hidden="true"></span> </label>
-                                        <a href="#">More Info <span className="fa fa-angle-down" aria-hidden="true"></span></a>
-                                        <input type="checkbox" id="drop-2" />
-                                        <ul className="inner-ul">
-                                            <li><a href="index.html">Gallery</a></li>
-                                            <li><a href="index.html">Statsts</a></li>
-                                            <li><a href="index.html">Partners</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                            {/* //nav */}
-                        </div>
-                    </header>
+                    <Navbar />
                     {/* //header */}
                     {/* /banner-inner */}
                     <div className="page-inner">
